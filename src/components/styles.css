@@ -1,0 +1,95 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	gap: 20rem;
+	padding: 1 1rem;
+}
+
+.nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	gap: 1rem;
+}
+
+.nav a {
+	color: inherit;
+	text-decoration: none;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	padding: 0.25rem;
+}
+
+.site-title {
+	font-family: "Rubik Glitch", cursive;
+	color: black;
+	font-weight: 400;
+	font-size: 5rem;
+}
+
+.nav li {
+	font-family: "Rubik Mono One", sans-serif;
+	color: black;
+	font-weight: 400;
+	font-size: 2rem;
+}
+
+.nav li:hover {
+	background-color: rgb(236, 127, 68);
+}
+
+img {
+	width: 100px;
+	height: 100px;
+}
+
+.container {
+	display: flex;
+	width: fit-content;
+}
+
+.side-content-center {
+	display: flex;
+	align-items: center;
+}
+
+.App-logo {
+	margin-right: 10px;
+}
+
+.glassmorphism-box {
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 50px;
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	padding: 20px;
+	margin: 20px;
+	font-family: "Roboto Mono", monospace;
+}
+.red-button {
+	background-color: #e34c5b;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 20px;
+	margin-top: 20px;
+	cursor: pointer;
+	font-family: "Roboto Mono", monospace;
+}
+
+.red-button:hover {
+	background-color: #ff8793;
+}
