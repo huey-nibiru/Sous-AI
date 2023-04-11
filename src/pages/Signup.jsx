@@ -1,6 +1,7 @@
 import "../App.css";
 import Navbar from "../components/navbar";
 function Signup() {
+	
 	return (
 		<div>
 			<Navbar />
