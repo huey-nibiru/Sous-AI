@@ -1,4 +1,5 @@
-import "../App.css";
+import "../components/App.css";
+
 import GlassmorphismBox from "../components/glass";
 import Navbar from "../components/navbar";
 function Home() {

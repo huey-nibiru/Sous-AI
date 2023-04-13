@@ -1,4 +1,4 @@
-import "../App.css";
+import "../components/App.css";
 import Navbar from "../components/navbar";
 function About() {
 	return (
