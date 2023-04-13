@@ -1,7 +1,7 @@
-import Particles from "react-tsparticles"
-import particlesConfig from "./config/particles-config.js"
+import Particles from "react-tsparticles";
+import particlesConfig from "./config/particles-config.js";
 
 const ParticlesBackground = () => {
-	return <div> ParticlesBackground</div>;
+	return <Particles></Particles>;
 };
 export default ParticlesBackground;
