@@ -1,6 +1,6 @@
 import "../components/App.css";
 import Navbar from "../components/navbar";
-/*
+
 function Signup() {
 	return (
 		<div>
@@ -9,8 +9,8 @@ function Signup() {
 		</div>
 	);
 }
-*/
 
+/*
 import React, { useState } from 'react';
 import { auth, googleAuthProvider } from './firebase'; // import Firebase auth and Google authentication provider
 
@@ -65,5 +65,5 @@ const SignupForm = () => {
 };
 
 
-
+*/
 export default Signup;
