@@ -1,5 +1,7 @@
-import "../components/App.css";
-import Navbar from "../components/navbar";
+import {React, Navbar} from "../components/dependencies";
+
+
+
 function About() {
 	return (
 		<div>

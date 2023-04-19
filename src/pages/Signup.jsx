@@ -1,6 +1,5 @@
-import "../components/App.css";
-import Navbar from "../components/navbar";
-
+import {React, Navbar} from "../components/dependencies";
+/*
 function Signup() {
 	return (
 		<div>
@@ -9,12 +8,12 @@ function Signup() {
 		</div>
 	);
 }
+*/
 
-/*
-import React, { useState } from 'react';
-import { auth, googleAuthProvider } from './firebase'; // import Firebase auth and Google authentication provider
+import { useState } from 'react';
+import { auth, googleAuthProvider } from '../services/firebase.js'; // import Firebase auth and Google authentication provider
 
-const SignupForm = () => {
+const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -65,5 +64,5 @@ const SignupForm = () => {
 };
 
 
-*/
+
 export default Signup;

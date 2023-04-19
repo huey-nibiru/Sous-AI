@@ -1,10 +1,11 @@
-import "./components/App.css";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import React from 'react';
+
 
 function App() {
 	let component;

@@ -1,7 +1,7 @@
-import "../components/App.css";
+import {React, Navbar} from "../components/dependencies";
 
 import GlassmorphismBox from "../components/glass";
-import Navbar from "../components/navbar";
+
 function Home() {
 	return (
 		<div>
