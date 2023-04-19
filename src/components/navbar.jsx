@@ -1,4 +1,6 @@
 import yinyang from "../media/yinyang.png";
+import React from 'react';
+
 import "./styles.css";
 export default function Navbar() {
 	return (
