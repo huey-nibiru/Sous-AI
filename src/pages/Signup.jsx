@@ -8,6 +8,7 @@ const SignupForm = () => {
 	const [confirmPassword, setConfirmPassword] = useState("");
 	const [passwordError, setPasswordError] = useState(false);
 	const [confirmPasswordError, setConfirmPasswordError] = useState(false);
+	const [formSubmitted, setFormSubmitted] = useState(false);
 
 	const handleEmailChange = (e) => {
 		setEmail(e.target.value);
@@ -28,6 +29,7 @@ const SignupForm = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		setFormSubmitted(true);
 		if (!passwordError && !confirmPasswordError) {
 			// Submit the form
 		}
@@ -55,12 +57,6 @@ const SignupForm = () => {
 							value={password}
 							onChange={handlePasswordChange}
 						/>
-						{passwordError && (
-							<span className="error-message">
-								Password must contain at least 8 characters, including at least
-								one uppercase letter, one lowercase letter, and one number
-							</span>
-						)}
 					</div>
 					<div className="form-group">
 						<label htmlFor="confirm-password">Confirm password:</label>
@@ -70,11 +66,20 @@ const SignupForm = () => {
 							value={confirmPassword}
 							onChange={handleConfirmPasswordChange}
 						/>
-						{confirmPasswordError && (
+						{formSubmitted && confirmPasswordError && (
 							<span className="error-message">Passwords do not match</span>
+						)}
+						{formSubmitted && passwordError && (
+							<span className="error-message">
+								Password must contain at least 8 characters, including at least
+								one uppercase letter, one lowercase letter, and one number
+							</span>
 						)}
 					</div>
 					<button type="submit">Sign up</button>
+					<p>
+						Already have an account? <a href="/login">Log in</a>
+					</p>
 				</form>
 			</div>
 		</>
