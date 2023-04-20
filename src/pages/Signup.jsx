@@ -5,7 +5,9 @@ import "../styles/signupForm.css"; // Import the CSS file for styling
 const SignupForm = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	const [confirmPassword, setConfirmPassword] = useState("");
 	const [passwordError, setPasswordError] = useState(false);
+	const [confirmPasswordError, setConfirmPasswordError] = useState(false);
 
 	const handleEmailChange = (e) => {
 		setEmail(e.target.value);
@@ -16,11 +18,17 @@ const SignupForm = () => {
 		const isValidPassword = passwordRegex.test(e.target.value);
 		setPassword(e.target.value);
 		setPasswordError(!isValidPassword);
+		setConfirmPasswordError(false);
+	};
+
+	const handleConfirmPasswordChange = (e) => {
+		setConfirmPassword(e.target.value);
+		setConfirmPasswordError(e.target.value !== password);
 	};
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (!passwordError) {
+		if (!passwordError && !confirmPasswordError) {
 			// Submit the form
 		}
 	};
@@ -54,8 +62,19 @@ const SignupForm = () => {
 							</span>
 						)}
 					</div>
+					<div className="form-group">
+						<label htmlFor="confirm-password">Confirm password:</label>
+						<input
+							type="password"
+							id="confirm-password"
+							value={confirmPassword}
+							onChange={handleConfirmPasswordChange}
+						/>
+						{confirmPasswordError && (
+							<span className="error-message">Passwords do not match</span>
+						)}
+					</div>
 					<button type="submit">Sign up</button>
-					<p>Already have an account? <a href="/login">Log in</a></p>
 				</form>
 			</div>
 		</>
