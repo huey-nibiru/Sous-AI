@@ -1,4 +1,4 @@
-import { React, Navbar } from "../components/dependencies";
+import { React, Navbar } from "../components/dependencies"; 
 import { useState } from "react";
 import "../styles/signupForm.css"; // Import the CSS file for styling
 
